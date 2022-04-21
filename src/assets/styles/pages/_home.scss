@@ -1,0 +1,30 @@
+.home__header {
+  min-height: 450px;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+  h2 {
+    font-size: 44px;
+    max-width: 350px;
+    color: $color_white;
+  }
+
+  @media (min-width: 768px) {
+    min-height: 650px;
+    padding-left: 100px;
+    h2 {
+      font-size: 64px;
+      max-width: 526px;
+    }
+  }
+  @media (min-width: 1080px) {
+    padding-left: 151px;
+    min-height: 850px;
+    h2 {
+      font-size: 78px;
+      max-width: 626px;
+    }
+  }
+}
