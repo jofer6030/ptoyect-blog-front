@@ -1,3 +1,5 @@
+import { BsFillAlarmFill } from 'react-icons/bs';
+
 const Home = () => {
   return (
     <header className='home__header'>
@@ -6,7 +8,7 @@ const Home = () => {
         We have created a new product that will help designers, developers and
         companies create websites for their startups quickly and easily.
       </p>
-
+      <BsFillAlarmFill />
       <div className='home__header__buttons'>
         <button>Get Started</button>
         <button>Learn More</button>
