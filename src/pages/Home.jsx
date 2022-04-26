@@ -1,6 +1,7 @@
 import { BsCodeSlash, BsStar } from 'react-icons/bs';
-import { FaHeart } from 'react-icons/fa';
+import { FaGlide, FaHeart } from 'react-icons/fa';
 import Categoria from '../components/Categoria';
+import Posts from '../components/Posts/Posts';
 import { categories } from '../data/categories';
 
 const Home = () => {
@@ -32,12 +33,26 @@ const Home = () => {
         <div className='home__better__category'>
           <h3>Categories</h3>
 
-          <div className='category__list'>
+          <div className='category__list container__section'>
             {categories.map(category => (
               <Categoria key={category.title} category={category} />
             ))}
           </div>
         </div>
+      </section>
+      <section className='home__productive container__section'>
+        <div className='home__productive_left'>
+          <FaGlide />
+          <h2>
+            Be more productive <span>Lookback is free to try for 14 days</span>
+          </h2>
+        </div>
+        <button>Sign Up</button>
+      </section>
+
+      <section className='home__posts'>
+        <h2>Posts</h2>
+        <Posts />
       </section>
     </>
   );
