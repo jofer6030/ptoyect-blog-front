@@ -1,7 +1,7 @@
 import { BsFillHeartFill, BsShareFill } from 'react-icons/bs';
 import { FaCommentDots } from 'react-icons/fa';
 
-const Post = () => {
+const Post = ({ post }) => {
   return (
     <article
       className='post__article'
@@ -14,31 +14,24 @@ const Post = () => {
       }}
     >
       <div className='post__article__avatar'>
-        <img
-          src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmE--NjTTosid1jFeMFdc12EVQtKi7XPRMYqeHI0_4jJlqBanUiyQ-KrqN5tsdK_MO0j8&usqp=CAU'
-          alt='Imagen Avatar'
-        />
+        <img src={post.avatar} alt='Imagen Avatar' />
       </div>
       <div className='post__article__body'>
-        <h3>A Guide To Rocky Mountain Vacations</h3>
-        <p>
-          These tips come from the safety experts at Voith Turbo, York, Pa.,
-          which manufactures a device that helps trains with braking, to make
-          train travel even better. The new type of railcar is on
-        </p>
+        <h3>{post.title}</h3>
+        <p>{post.description}</p>
       </div>
       <div className='post__article__footer'>
         <div className='article__footer__stats'>
           <BsFillHeartFill />
-          <span>325</span>
+          <span>{post.likes}</span>
         </div>
         <div className='article__footer__stats'>
           <FaCommentDots />
-          <span>115</span>
+          <span>{post.comments}</span>
         </div>
         <div className='article__footer__stats'>
           <BsShareFill />
-          <span>47</span>
+          <span>{post.share}</span>
         </div>
       </div>
     </article>
